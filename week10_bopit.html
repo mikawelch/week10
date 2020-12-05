@@ -1,0 +1,113 @@
+<html>
+
+
+		<head>
+		
+		<title>
+		Week 10
+		</title>
+		
+		
+		<script   src="http://code.jquery.com/jquery-3.5.1.slim.min.js"   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="   crossorigin="anonymous">
+		</script>
+		
+		
+		</head>
+		
+		
+		
+		<body>
+			<h1>High Score: <span id="highScore"></span></h1>
+			<h2>Score: <span id="currentScore"></span></h2>
+			<h4>You will press either "A", "F", or "Space".</h4>
+			<button id="start">Click here</button>
+			
+			<h1><span id="displayCommand"></span></h1>
+		
+		
+		
+		
+		
+			<script>
+		
+				var commands = [
+					{
+					key: "Press A",
+					keyCode: 65
+					},
+					{
+					key: "Press F",
+					keyCode: 70
+					},
+					{
+					key: "Press Space",
+					keyCode: 32
+					}];
+		
+			
+		
+		
+				start.addEventListener("click", startGame);
+				
+				
+				
+				
+				
+				
+				function getCommand() {
+				var random = Math.floor(Math.random()*3);
+				var currentCommand = commands[random];
+				var currentKey = currentCommand.key;
+				var currentKeyCode = currentCommand.keyCode;
+				document.getElementById('displayCommand').innerText = currentKey;
+				return currentKeyCode;
+				
+				}
+			
+				
+				function checkKey() {
+				
+				window.onkeydown = function(e) {
+				var input = e.keyCode;
+				return input;
+				}
+				
+				
+				}
+				
+				function startGame() {
+				
+				getCommand();
+				checkKey();
+				
+				setTimeout(function(){
+				alert("You ran out of time");
+				}, 2000);
+				
+				var a = getCommand;
+				var b = checkKey;
+				if ( a === b){
+				getCommand();
+				checkKey;
+				setTimeout(function(){
+				alert("You ran out of time");
+				
+				}, 2000);
+				}
+				
+				
+				}
+				
+			
+				
+				
+				
+				
+		
+		
+			</script>
+		</body>
+		
+		
+		
+	</html>
